@@ -1,0 +1,111 @@
+main, header, aside footer{
+    border:1px solid gray;
+    padding: 0px;
+}
+body{
+    background-image: url("./kepek/hatter.jpg");
+}
+header{
+    grid-area: h;
+    background-image: url("./kepek/fejlec.jpg");
+    color: white;
+    text-align: center;
+}
+p{
+    font-size: 17px;
+}
+img{
+    max-width: 50%;
+    width: 284px;
+    padding: 10px 10px 20px 10px;
+    border: 1px solid #BFBFBF;
+    background-color: white;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    float: left;
+  -ms-transform: rotate(7deg);
+  -webkit-transform: rotate(7deg);
+  transform: rotate(7deg);
+  
+}
+article{
+    grid-area: a;
+    margin: auto;
+    padding: 40px;
+    grid-template-columns: 1fr 1fr 
+}
+section{
+    grid-area: se;
+    display:grid ;
+    grid-template-columns: 1fr 1fr ;
+}
+aside{
+    grid-area: as;
+    border: solid gray 1px;
+    padding: 5px;
+}
+footer{
+    background-color: rgb(33, 126, 248);
+    grid-area: f;
+    list-style-type: none;
+    list-style: none;
+    padding: 0; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color:black;
+}
+nav{
+    grid-area: n;
+}
+nav ul{
+    list-style-type: none;
+    list-style: none;
+    border-radius: 20px;
+}
+ nav li a{
+    background-color: rgb(33, 126, 248);
+    text-decoration: none;
+    width:100%;
+    display: block;
+    color:white;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 20px;
+    text-align: center;
+}
+nav li a:hover{
+    color: white;
+    background-color: black;
+}
+table {
+    width: 90%;
+    margin-left: 30px;
+    border-collapse: collapse;
+}
+tr {
+    border-bottom: 1px solid #13A0FF;
+}
+tr:nth-child(odd) {
+    background-color: #C8F8FF;
+}
+main{
+    margin: auto;
+    background-color: white;
+    max-width: 800px;
+        display: grid;
+        grid-template-columns:  auto auto auto 250px;
+        grid-template-areas:    "h h h h"
+                                "n a a as"
+                                "f f f f";
+}
+@media screen and (max-width:600px){
+    main{
+        display: grid;
+        grid-template-columns: 150px auto auto auto;
+        grid-template-areas:    "h"
+                                "n"
+                                "a"
+                                "as"
+                                "f";
+    }
+}
